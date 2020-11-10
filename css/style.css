@@ -369,3 +369,9 @@ a {
 /* PRODUCTS-BEST-PRICE */
 
 /*=== FOOTER ===*/
+.footer-email {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-orange);
+}

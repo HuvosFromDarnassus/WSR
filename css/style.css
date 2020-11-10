@@ -6,6 +6,8 @@
   --basic-greylight: #9a9a9a;
   --basic-background: #f5f5f5;
   --text-brown: #3e3e3e;
+  --hover-blue: #00669c;
+  --hover-tomato: #d2400f;
   --black: #000;
   --white: #fff;
 }
@@ -254,6 +256,11 @@ a {
   color: var(--basic-orange);
 }
 
+.main-nav-link:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
 .main-search-button {
   font-size: 12px;
   font-weight: 400;
@@ -270,6 +277,7 @@ a {
 }
 
 .product-categories-link:hover {
+  color: var(--hover-blue);
   text-decoration: underline;
 }
 
@@ -339,7 +347,8 @@ a {
 }
 
 .product-title:hover {
-  color: var(--basic-red);
+  color: var(--hover-blue);
+  text-decoration: none;
 }
 
 .product-price {
@@ -372,6 +381,12 @@ a {
   color: var(--text-brown);
   border: none;
   background-color: var(--basic-orange);
+}
+
+.product-buy-button:hover {
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--hover-tomato);
 }
 
 /* PRODUCTS-BEST-PRICE */

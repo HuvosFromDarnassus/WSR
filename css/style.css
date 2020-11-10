@@ -1,0 +1,91 @@
+/*=== ROOT PROPERTIES ===*/
+:root {
+  --black: #000;
+  --white: #fff;
+}
+
+/*=== FONTS ===*/
+
+/*=== GENERAL STYLES ===*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 1300px;
+  margin: 0;
+  padding: 0;
+
+  /* ИЗМЕНИТЬ */
+
+  /* font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-grey); */
+  background-color: var(--white);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+
+    /* СЕТКА */
+
+  /* display: grid;
+  grid-template-rows: min-content 1fr min-content; */
+  align-content: start;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1290px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/*=== HEADER ===*/
+
+/*=== MAIN ===*/
+/* PRODUCTS-CATEGORIES */
+
+/* NEWS-ASIDE */
+
+/* POPULAR-PRODUCERS-BANNER */
+
+/* PRODUCTS-NOVETLY */
+
+/* PRODUCTS-BEST-PRICE */
+
+/*=== FOOTER ===*/

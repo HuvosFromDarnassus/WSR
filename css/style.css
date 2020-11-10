@@ -199,6 +199,13 @@ a {
   padding: 0 10px;
 }
 
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-red);
+}
+
 /*=== HEADER ===*/
 .header-main-slogan {
   font-size: 11px;
@@ -275,13 +282,6 @@ a {
   line-height: 21px;
 }
 
-.news-main-title {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 21px;
-  color: var(--basic-red);
-}
-
 .news-title {
   font-size: 12px;
   font-weight: 700;
@@ -314,13 +314,6 @@ a {
 /* POPULAR-PRODUCERS-BANNER */
 
 /* PRODUCTS-NOVETLY */
-.products-novelty-title {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 21px;
-  color: var(--basic-red);
-}
-
 .all-link {
   font-size: 12px;
   font-weight: 400;

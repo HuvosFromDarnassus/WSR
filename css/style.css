@@ -275,11 +275,17 @@ a {
   line-height: 21px;
 }
 
-.news-title {
-  font-size: 14px;
+.news-main-title {
+  font-size: 16px;
   font-weight: 700;
   line-height: 21px;
-  text-decoration: underline;
+  color: var(--basic-red);
+}
+
+.news-title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
   color: var(--text-brown);
 }
 
@@ -308,6 +314,64 @@ a {
 /* POPULAR-PRODUCERS-BANNER */
 
 /* PRODUCTS-NOVETLY */
+.products-novelty-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-red);
+}
+
+.all-link {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  text-decoration: underline;
+  color: var(--basic-red);
+}
+
+.product-card {
+  background-color: var(--basic-background);
+}
+
+.product-title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
+  text-decoration: underline;
+  color: var(--text-brown);
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  text-decoration: none;
+  color: var(--text-brown);
+}
+
+.product-price-currency {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--text-brown);
+}
+
+.product-supply-number {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  font-style: italic;
+  color: var(--text-brown);
+}
+
+.product-buy-button {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--text-brown);
+  border: none;
+  background-color: var(--basic-orange);
+}
 
 /* PRODUCTS-BEST-PRICE */
 

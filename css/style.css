@@ -269,6 +269,10 @@ a {
   color: var(--text-brown);
 }
 
+.product-categories-link:hover {
+  text-decoration: underline;
+}
+
 .active-category {
   font-weight: 700;
   text-decoration: underline;
@@ -332,6 +336,10 @@ a {
   line-height: 21px;
   text-decoration: underline;
   color: var(--text-brown);
+}
+
+.product-title:hover {
+  color: var(--basic-red);
 }
 
 .product-price {

@@ -6,6 +6,130 @@
 
 /*=== FONTS ===*/
 
+/* == SANS == */
+@font-face {
+  font-family: "Abeezee";
+  font-style: normal;
+  font-weight: 400;
+  src: local("ABeeZee"), local("ABeeZee-Regular"),
+    url("../fonts/abeezee.ttf");
+}
+
+@font-face {
+  font-family: "Acline";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Acline"), local("Acline-Regular"),
+    url("../fonts/acline.ttf");
+}
+
+@font-face {
+  font-family: "Airborn";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Airborn"), local("Airborn-Regular"),
+    url("../fonts/airborne.ttf");
+}
+
+@font-face {
+  font-family: "Alegreyasans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Alegreyasans"), local("Alegreyasans-Regular"),
+    url("../fonts/alegreyasans.ttf");
+}
+
+@font-face {
+  font-family: "Nerisblack";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Nerisblack"), local("Nerisblack-Regular"),
+    url("../fonts/nerisblack.ttf");
+}
+
+@font-face {
+  font-family: "Nikodecs";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Nikodecs"), local("Nikodecs-Regular"),
+    url("../fonts/nikodecs.ttf");
+}
+
+@font-face {
+  font-family: "Oswaldheavy";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Oswaldheavy"), local("NikOswaldheavyodecs-Regular"),
+    url("../fonts/Oswaldheavy.ttf");
+}
+
+@font-face {
+  font-family: "Resavskabgsans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Resavskabgsans"), local("Resavskabgsans-Regular"),
+    url("../fonts/resavskabgsans.ttf");
+}
+
+/* Ristrettopro-regular */
+@font-face {
+  font-family: "Ristrettopro";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ristrettopro"), local("Ristrettopro-Regular"),
+    url("../fonts/Ristrettopro-regular.ttf");
+}
+
+/* == DECOR == */
+@font-face {
+  font-family: "Augustatwo";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Augustatwo"), local("Augustatwo-Regular"),
+    url("../fonts/augustatwo.ttf");
+}
+
+@font-face {
+  font-family: "Bradobrei";
+  font-style: normal;
+  font-weight: 400;
+  src: local("bradobrei"), local("bradobrei-Regular"),
+    url("../fonts/bradobrei.ttf");
+}
+
+@font-face {
+  font-family: "Calligraphmedium";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Calligraphmedium"), local("Calligraphmedium-Regular"),
+    url("../fonts/calligraphmedium.ttf");
+}
+
+@font-face {
+  font-family: "Classicatwo";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Classicatwo"), local("Classicatwo-Regular"),
+    url("../fonts/classicatwo.ttf");
+}
+
+@font-face {
+  font-family: "Egipetbold";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Egipetbold"), local("Egipetbold-Regular"),
+    url("../fonts/egipetbold.ttf");
+}
+
+/* fortunagothicflorishc */
+@font-face {
+  font-family: "Fortunagothicflorishc";
+  font-style: normal;
+  font-weight: 400;
+  src: local("fortunagothicflorishc"), local("fortunagothicflorishc-Regular"),
+    url("../fonts/fortunagothicflorishc.ttf");
+}
+
 /*=== GENERAL STYLES ===*/
 *,
 *::after,
@@ -20,11 +144,11 @@ body {
 
   /* ИЗМЕНИТЬ */
 
-  /* font-family: "Cuprum", "Arial", sans-serif;
+  font-family: "ABeeZee", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  color: var(--basic-grey); */
+  color: var(--black);
   background-color: var(--white);
 }
 

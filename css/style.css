@@ -1,11 +1,16 @@
 /*=== ROOT PROPERTIES ===*/
 :root {
+  --basic-brown: #393939;
+  --basic-orange: #ffb326;
+  --basic-red: #ee0000;
+  --basic-greylight: #9a9a9a;
+  --basic-background: #f5f5f5;
+  --text-brown: #3e3e3e;
   --black: #000;
   --white: #fff;
 }
 
 /*=== FONTS ===*/
-
 /* == SANS == */
 @font-face {
   font-family: "Abeezee";
@@ -71,7 +76,6 @@
     url("../fonts/resavskabgsans.ttf");
 }
 
-/* Ristrettopro-regular */
 @font-face {
   font-family: "Ristrettopro";
   font-style: normal;
@@ -121,7 +125,6 @@
     url("../fonts/egipetbold.ttf");
 }
 
-/* fortunagothicflorishc */
 @font-face {
   font-family: "Fortunagothicflorishc";
   font-style: normal;
@@ -141,10 +144,7 @@ body {
   min-width: 1300px;
   margin: 0;
   padding: 0;
-
-  /* ИЗМЕНИТЬ */
-
-  font-family: "ABeeZee", "Arial", sans-serif;
+  font-family: "airborne","Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -200,6 +200,64 @@ a {
 }
 
 /*=== HEADER ===*/
+.header {
+  font-family: "ABeeZee", "Arial", sans-serif;
+}
+
+.header-main-slogan {
+  font-size: 11px;
+}
+
+.contacts-tel-link {
+  font-family: "airborne","Arial", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-orange);
+}
+
+.header-weekdays {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--basic-greylight);
+}
+
+.login-link,
+.signin-link,
+.cart-link {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  text-decoration: underline;
+  color: var(--text-brown);
+}
+
+.products-counter {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--text-brown);
+}
+
+.main-nav {
+  background-color: var(--basic-brown);
+}
+
+.main-nav-link {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  text-decoration: underline;
+  color: var(--basic-orange);
+}
+
+.main-search-button {
+  font-family: "airborne","Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+}
 
 /*=== MAIN ===*/
 /* PRODUCTS-CATEGORIES */

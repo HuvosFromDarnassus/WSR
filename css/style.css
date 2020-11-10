@@ -200,16 +200,11 @@ a {
 }
 
 /*=== HEADER ===*/
-.header {
-  font-family: "ABeeZee", "Arial", sans-serif;
-}
-
 .header-main-slogan {
   font-size: 11px;
 }
 
 .contacts-tel-link {
-  font-family: "airborne","Arial", sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 21px;
@@ -253,7 +248,6 @@ a {
 }
 
 .main-search-button {
-  font-family: "airborne","Arial", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 21px;
@@ -261,8 +255,55 @@ a {
 
 /*=== MAIN ===*/
 /* PRODUCTS-CATEGORIES */
+.product-categories-link {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--text-brown);
+}
+
+.active-category {
+  font-weight: 700;
+  text-decoration: underline;
+  list-style: none;
+}
 
 /* NEWS-ASIDE */
+.news-search-button {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.news-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-decoration: underline;
+  color: var(--text-brown);
+}
+
+.news-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--text-brown);
+}
+
+.news-pubdate,
+.news-comments-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.news-pubdate {
+  color: var(--basic-red);
+}
+
+.news-comments-link {
+  color: var(--basic-orange);
+}
 
 /* POPULAR-PRODUCERS-BANNER */
 

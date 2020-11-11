@@ -305,11 +305,14 @@ a {
   margin: 0 auto;
 }
 
+.main-nav-item {
+  margin-right: 10px;
+}
+
 .main-nav-link {
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
-  margin-right: 10px;
   text-decoration: underline;
   color: var(--basic-orange);
 }
@@ -479,7 +482,6 @@ a {
 
 /* PRODUCTS-NOVETLY */
 .products-novelty {
-  outline-offset: -2px;
   grid-column: 2 / 4;
 }
 
@@ -581,8 +583,24 @@ a {
 
 /*=== FOOTER ===*/
 .footer {
+  margin-top: 10px;
+  background-color: var(--basic-brown);
+  border-bottom: 7px var(--basic-red) solid;
+}
+
+.footer-content-wrapper {
   display: flex;
   justify-content: space-between;
+  width: 760px;
+  padding: 25px;
+}
+
+.footer-socials-list {
+  display: flex;
+}
+
+.socials-item {
+  margin-left: 15px;
 }
 
 .footer-email {

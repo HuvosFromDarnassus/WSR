@@ -220,7 +220,12 @@ a {
   line-height: 21px;
   text-decoration: underline;
   color: var(--basic-red);
-  padding-left: 15px;
+}
+
+.all-link-icon {
+  font-size: 16px;
+  color: var(--basic-red);
+  margin-right: 5px;
 }
 
 /*=== HEADER ===*/
@@ -277,6 +282,22 @@ a {
   line-height: 14px;
   text-decoration: underline;
   color: var(--text-brown);
+}
+
+.cart-link {
+  padding-left: 25px;
+  position: relative;
+}
+
+.cart-link::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 18px;
+  top: 50%;
+  left: 0;
+  transform: translate(0px, -50%);
+  background-image: url("../img/korz_1.png");
 }
 
 .products-counter {
@@ -392,6 +413,22 @@ a {
 .active-category .product-categories-link {
   font-weight: 700;
   text-decoration: underline;
+}
+
+.aside-advertisement-link {
+  margin-top: 50px;
+  display: block;
+  width: 192px;
+  height: 229px;
+  position: relative;
+}
+
+.aside-advertisement-link::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/banner_1.jpg");
+  width: 192px;
+  height: 229px;
 }
 
 /* NEWS-ASIDE */
@@ -591,8 +628,20 @@ a {
 .footer-content-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 760px;
+  width: 800px;
   padding: 25px;
+}
+
+.footer-email-text {
+  margin: 0;
+  color: var(--basic-orange);
+}
+
+.footer-email-link {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-red);
 }
 
 .footer-socials-list {
@@ -601,11 +650,4 @@ a {
 
 .socials-item {
   margin-left: 15px;
-}
-
-.footer-email {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 21px;
-  color: var(--basic-orange);
 }

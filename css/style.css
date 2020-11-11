@@ -202,14 +202,14 @@ a {
 .title-wrapper {
   display: flex;
   flex-wrap: wrap;
-  width: min-content;
+  margin-bottom: 10px;
 }
 
 .title {
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
-  margin: 0;
+  margin: 0 15px 0 0;
   color: var(--basic-red);
 }
 
@@ -219,6 +219,7 @@ a {
   line-height: 21px;
   text-decoration: underline;
   color: var(--basic-red);
+  padding-left: 15px;
 }
 
 /*=== HEADER ===*/
@@ -465,14 +466,34 @@ a {
   grid-column: 2 / 4;
 }
 
+.products-novelty-list,
+.products-best-price-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+}
+
 .product-card {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--basic-background);
+  padding: 5px;
+  width: 300px;
+}
+
+.product-info-wrapper {
+  display: grid;
+  gap: 7px;
 }
 
 .product-title {
   font-size: 12px;
   font-weight: 700;
   line-height: 21px;
+  width: 200px;
+  min-height: 60px;
+  margin: 0;
   text-decoration: underline;
   color: var(--text-brown);
 }
@@ -503,15 +524,22 @@ a {
   font-weight: 400;
   line-height: 21px;
   font-style: italic;
+  margin: 0;
+  width: 90px;
   color: var(--text-brown);
+}
+
+.img-button-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 25px;
 }
 
 .product-buy-button {
   font-size: 13px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 24px;
+  text-align: center;
   color: var(--text-brown);
-  border: none;
   background-color: var(--basic-orange);
 }
 
@@ -537,8 +565,6 @@ a {
 
 
 /* TODO:
-2) Исправить переполнение в новостях
-3) .title-wrapper
 4) list-style у категорий
 5) Карточки товаров
 6) Футер */

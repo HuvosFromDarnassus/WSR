@@ -11,28 +11,32 @@
 
 <body class="page-body">
 
-  <header class="header">
-    <div class="header-logo-slogan-wrapper">
-      <a class="header-logo-link" href=""><img src="img/Logo.png" alt="Логотип-Portal FOTO" width="203"
-          height="56" /></a>
-      <h1 class="header-main-slogan">профессиональная фототехника</h1>
-    </div>
+  <header class="header container">
+    <div class="header-top-wrapper">
+      <div class="header-logo-slogan-wrapper">
+        <a class="header-logo-link" href=""><img src="img/Logo.png" alt="Логотип-Portal FOTO" width="203"
+            height="56" /></a>
+        <h1 class="header-main-slogan">профессиональная фототехника</h1>
+      </div>
 
-    <div class="header-contacts-days-wrapper">
-      <h2 class="contacts-days-title visually-hidden">Как связаться и дни работы</h2>
-      <p class="header-contacts">
-        <a class="contacts-tel-link" href="tel:+74959848271">+7(495)984-82-71</a>
-        <a class="contacts-tel-link" href="tel:+74959026095">+7(495)902-60-95</a>
-      </p>
-      <p class="header-weekdays">Пн-Пт: с 10:00 до 19:00</p>
-      <p class="header-weekdays">Сб-Вс: Выходной</p>
-    </div>
+      <div class="contacts-login-wrapper">
+        <div class="header-contacts-days-wrapper">
+          <h2 class="contacts-days-title visually-hidden">Как связаться и дни работы</h2>
+          <p class="header-contacts">
+            <a class="contacts-tel-link" href="tel:+74959848271">+7(495)984-82-71</a><br>
+            <a class="contacts-tel-link" href="tel:+74959026095">+7(495)902-60-95</a>
+          </p>
+          <p class="header-weekdays">Пн-Пт: с 10:00 до 19:00</p>
+          <p class="header-weekdays">Сб-Вс: Выходной</p>
+        </div>
 
-    <div class="header-login-wrapper">
-      <a class="login-link" href="">Вход с паролем</a>
-      <a class="signin-link" href="">Регистрация</a>
-      <a class="cart-link" href="">Моя корзина</a>
-      <p class="products-counter">Товары: 0 шт.</p>
+        <div class="header-login-wrapper">
+          <a class="login-link" href="">Вход с паролем</a>
+          <a class="signin-link" href="">Регистрация</a><br>
+          <a class="cart-link" href="">Моя корзина</a>
+          <p class="products-counter">Товары: 0 шт.</p>
+        </div>
+      </div>
     </div>
 
     <nav class="main-nav">
@@ -45,39 +49,50 @@
         <li class="main-nav-item"><a class="main-nav-link" href="">Гарантии</a></li>
         <li class="main-nav-item"><a class="main-nav-link" href="">Контакты</a></li>
       </ul>
+      <form class="main-search-form">
+        <input class="main-search" type="text" placeholder="Название модели, раздела">
+        <button class="main-search-button" type="button">Найти</button>
+      </form>
     </nav>
 
-    <form class="main-search-form">
-      <input class="main-search" type="text">
-      <button class="main-search-button" type="button">Найти</button>
-    </form>
+
   </header>
 
-  <main>
+  <main class="main container">
     <section class="products-categories">
       <h2 class="product-categories-title visually-hidden">Типы товаров</h2>
       <ul class="product-categories-list">
         <li class="product-categories-item"><a class="product-categories-link active-category"
             href="index.html">Фототехника</a></li>
-        <li class="product-categories-item"><a class="product-categories-link" href="category-cameras.html">Цифровые
+        <li class="product-categories-item"><a class="product-categories-link"
+            href="category-cameras.html">Цифровые
             фотоаппараты</a></li>
-        <li class="product-categories-item"><a class="product-categories-link" href="category-lens.html">Объективы</a>
+        <li class="product-categories-item"><a class="product-categories-link"
+            href="category-lens.html">Объективы</a>
         </li>
         <li class="product-categories-item"><a class="product-categories-link" href="">Фотоспышки</a></li>
         <li class="product-categories-item"><a class="product-categories-link" href="">Светофильтры</a></li>
         <li class="product-categories-item"><a class="product-categories-link"
             href="category-photo-bags.html">Фотосумки</a></li>
-        <li class="product-categories-item"><a class="product-categories-link" href="">Штативы, моноподы</a></li>
-        <li class="product-categories-item"><a class="product-categories-link" href="">Карты памяти</a></li>
-        <li class="product-categories-item"><a class="product-categories-link" href="">Накамерный свет LED</a></li>
-        <li class="product-categories-item"><a class="product-categories-link" href="">Микрофоны выносные</a></li>
-        <li class="product-categories-item"><a class="product-categories-link" href="">Калибраторы и шкалы</a></li>
-        <li class="product-categories-item"><a class="product-categories-link" href="">Подводные боксы</a></li>
-        <li class="product-categories-item"><a class="product-categories-link" href="">Аксессуары и опции</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Штативы,
+            моноподы</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Карты
+            памяти</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Накамерный
+            свет LED</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Микрофоны
+            выносные</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Калибраторы и
+            шкалы</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Подводные
+            боксы</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Аксессуары и
+            опции</a></li>
       </ul>
 
       <aside class="aside-advertisement">
-        <a class="aside-advertisement-link" href=""><span class="visually-hidden">Баннер: Купить в кредит не выходя из
+        <a class="aside-advertisement-link" href=""><span class="visually-hidden">Баннер: Купить в
+            кредит не выходя из
             дома</span></a>
       </aside>
     </section>
@@ -86,38 +101,52 @@
       <h2 class="news-main-title title">Новости</h2>
 
       <form class="news-search-form">
-        <input class="news-search" type="text">
+        <input class="news-search" type="text" placeholder="Новость">
         <button class="button news-search-button" type="button">Найти</button>
       </form>
 
       <ul class="list-reset news-list">
         <li class="news-item">
           <article class="news-body">
-            <h3 class="news-title">Компания Sony выпустила анонс нового поколения камер Alpha</h3>
-            <time class="news-pubdate" datetime="2020-11-05">5 Наяб</time>
-            <p class="news-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod magni maxime ducimus
+            <div class="news-body-top">
+              <h3 class="news-title">Компания Sony выпустила анонс нового поколения камер Alpha</h3>
+              <time class="news-pubdate" datetime="2020-11-05">5 Наяб</time>
+            </div>
+            <p class="news-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+              magni maxime ducimus
               natus sint asperiores
-              culpa, officiis tempora iusto possimus odio eius deleniti, sapiente cum libero minus ad, nam magnam?</p>
+              culpa, officiis tempora iusto possimus odio eius deleniti, sapiente cum libero minus
+              ad, nam magnam?</p>
             <a class="news-comments-link" href="">Комментарии</a>
           </article>
         </li>
         <li class="news-item">
           <article class="news-body">
-            <h3 class="news-title">30 невероятных снимков от победителей конкурса International Photography Awards</h3>
-            <time class="news-pubdate" datetime="2020-10-29">29 Окт</time>
-            <p class="news-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod magni maxime ducimus
+            <div class="news-body-top">
+              <h3 class="news-title">30 невероятных снимков от победителей конкурса International
+                Photography Awards</h3>
+              <time class="news-pubdate" datetime="2020-10-29">29 Окт</time>
+            </div>
+            <p class="news-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+              magni maxime ducimus
               natus sint asperiores
-              culpa, officiis tempora iusto possimus odio eius deleniti, sapiente cum libero minus ad, nam magnam?</p>
+              culpa, officiis tempora iusto possimus odio eius deleniti, sapiente cum libero minus
+              ad, nam magnam?</p>
             <a class="news-comments-link" href="">Комментарии</a>
           </article>
         </li>
         <li class="news-item">
           <article class="news-body">
-            <h3 class="news-title">Фото с Земли, которые обязательно должны увидеть инопланетяне</h3>
-            <time class="news-pubdate" datetime="2020-10-17">17 Окт</time>
-            <p class="news-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod magni maxime ducimus
+            <div class="news-body-top">
+              <h3 class="news-title">Фото с Земли, которые обязательно должны увидеть инопланетяне
+              </h3>
+              <time class="news-pubdate" datetime="2020-10-17">17 Окт</time>
+            </div>
+            <p class="news-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+              magni maxime ducimus
               natus sint asperiores
-              culpa, officiis tempora iusto possimus odio eius deleniti, sapiente cum libero minus ad, nam magnam?</p>
+              culpa, officiis tempora iusto possimus odio eius deleniti, sapiente cum libero minus
+              ad, nam magnam?</p>
             <a class="news-comments-link" href="">Комментарии</a>
           </article>
         </li>
@@ -125,20 +154,24 @@
     </aside>
 
     <aside class="popular-producers-banner">
-      <a class="popular-producers-link" href=""><img src="img/banner-img.jpg" alt="Баннер: Компания Bowens"></a>
+      <a class="popular-producers-link" href=""><img src="img/banner-img.jpg"
+          alt="Баннер: Компания Bowens"></a>
     </aside>
 
     <section class="products-novelty">
-      <h2 class="products-novelty-title title">Новинки</h2>
-      <a class="all-link" href="">все</a>
+      <div class="title-wrapper">
+        <h2 class="products-novelty-title title">Новинки</h2>
+        <a class="all-link" href="">все</a>
+      </div>
 
       <ul class="list-reset products-novelty-list">
         <li class="products-novelty-item">
           <article class="product-card">
             <a class="product-title-link" href="">
-              <h3 class="product-title">Meikon Sony A6000 16-50 подводный бокс для Sony Alpha A6000 Kit + 16-50</h3>
+              <h3 class="product-title">Meikon Sony A6000 16-50 подводный бокс для Sony Alpha A6000
+                Kit + 16-50</h3>
             </a>
-            <img class="product-img" src="img/" width="82" height="82"
+            <img class="product-img" src="img/product-img-1.jpg" width="82" height="82"
               alt="Товар Meikon Sony A6000 16-50 подводный бокс для Sony Alpha A6000 Kit + 16-50">
             <ins class="product-price">27 200 <span class="product-price-currency">руб.</span></ins>
             <p class="product-supply-number">Товар №E7361 Склад</p>
@@ -148,7 +181,8 @@
         <li class="products-novelty-item">
           <article class="product-card">
             <a class="product-title-link" href="">
-              <h3 class="product-title">Meikon Sony A7/7R/7S 28-70 подводный бокс для Sony Alpha A7/7R/7S Kit + 28-70
+              <h3 class="product-title">Meikon Sony A7/7R/7S 28-70 подводный бокс для Sony Alpha
+                A7/7R/7S Kit + 28-70
               </h3>
             </a>
             <img class="product-img" src="img/product-img-2.jpg" width="82" height="82"
@@ -197,7 +231,8 @@
         <li class="products-novelty-item">
           <article class="product-card">
             <a class="product-title-link" href="">
-              <h3 class="product-title">Meikon G!1x Mark II подводный бокс для Canon Powershot G1x Mark II (WP-DC53)
+              <h3 class="product-title">Meikon G!1x Mark II подводный бокс для Canon Powershot G1x
+                Mark II (WP-DC53)
               </h3>
             </a>
             <img class="product-img" src="img/product-img-6.jpg" width="82" height="82"
@@ -211,14 +246,17 @@
     </section>
 
     <section class="products-best-price">
-      <h2 class="products-best-price-title title">Лучшая цена</h2>
-      <a class="all-link" href="">все</a>
+      <div class="title-wrapper">
+        <h2 class="products-best-price-title title">Лучшая цена</h2>
+        <a class="all-link" href="">все</a>
+      </div>
 
       <ul class="list-reset products-best-price-list">
         <li class="best-price-item">
           <article class="product-card">
             <a class="product-title-link" href="">
-              <h3 class="product-title">Carl Zeiss Makro-Planar T* 100 mm f/2 ZE (Canon) объектив</h3>
+              <h3 class="product-title">Carl Zeiss Makro-Planar T* 100 mm f/2 ZE (Canon) объектив
+              </h3>
             </a>
             <img class="product-img" src="img/product-img-7.jpg" width="82" height="82"
               alt="Товар Carl Zeiss Makro-Planar T* 100 mm f/2 ZE (Canon) объектив">
@@ -256,7 +294,8 @@
   </main>
 
   <footer class="footer">
-    <a class="footer-email" href="mailto:danya.tvorun.88@mail.ru">Задайте вопросы по электронной почте</a>
+    <a class="footer-email" href="mailto:danya.tvorun.88@mail.ru">Задайте вопросы по электронной
+      почте</a>
 
     <div class="footer-socials-wrapper">
       <a class="socials-link" href="https://ru-ru.facebook.com/">Facebook</a>

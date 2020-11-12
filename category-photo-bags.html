@@ -1,173 +1,313 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Категория: Фотосумки</title>
 </head>
 
-<body>
-  <header>
-    <div>
-      <a href=""><img src="img/Logo.png" alt="Логотип-Portal FOTO" width="203" height="56" /></a>
-      <h1>Профессиональная фототехника</h1>
+<body class="page-body">
+  <header class="header">
+    <div class="header-top-wrapper container">
+      <div class="header-logo-slogan-wrapper">
+        <a class="header-logo-link" href=""><img class="logo-img" src="img/Logo.png" alt="Логотип-Portal FOTO"
+            width="203" height="56" /></a>
+        <h1 class="header-main-slogan">профессиональная фототехника</h1>
+      </div>
+
+      <div class="contacts-login-wrapper">
+        <div class="header-contacts-days-wrapper">
+          <h2 class="contacts-days-title visually-hidden">Как связаться и дни работы</h2>
+          <p class="header-contacts">
+            <a class="contacts-tel-link" href="tel:+74959848271">+7(495)984-82-71</a><br>
+            <a class="contacts-tel-link" href="tel:+74959026095">+7(495)902-60-95</a>
+          </p>
+          <p class="header-weekdays">Пн-Пт: с 10:00 до 19:00</p>
+          <p class="header-weekdays">Сб-Вс: Выходной</p>
+        </div>
+
+        <div class="header-login-wrapper">
+          <a class="login-link" href="">Вход с паролем</a>
+          <a class="signin-link" href="">Регистрация</a><br>
+          <a class="cart-link" href="">Моя корзина</a>
+          <p class="products-counter">Товары: 0 шт.</p>
+        </div>
+      </div>
+
+      <button class="modal-login-open-button" type="button"><span class="visually-hidden">login</span></button>
+      <button class="modal-menu-open-button" type="button"><span class="visually-hidden">меню</span></button>
     </div>
 
-    <div>
-      <h2>Как связаться и дни работы</h2>
-      <p>
-        <a href="tel:+74959848271">+7(495)984-82-71</a>
-        <a href="tel:+74959026095">+7(495)902-60-95</a>
-      </p>
-      <p>Пн-Пт: с 10:00 до 19:00</p>
-      <p>Сб-Вс: Выходной</p>
-    </div>
-
-    <div>
-      <a href="">Вход с паролем</a>
-      <a href="">Регистрация</a>
-      <a href="">Моя корзина</a>
-      <p>Товары: 0 шт.</p>
-    </div>
-
-    <div>
-      <nav>
-        <ul>
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="">О компании</a></li>
-          <li><a href="">Оплата</a></li>
-          <li><a href="">В кредит</a></li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Гарантии</a></li>
-          <li><a href="">Контакты</a></li>
+    <div class="header-bottom-wrapper">
+      <nav class="main-nav container">
+        <ul class="list-reset main-nav-list">
+          <li class="main-nav-item"><a class="main-nav-link" href="news.html">Новости</a></li>
+          <li class="main-nav-item"><a class="main-nav-link" href="">О компании</a></li>
+          <li class="main-nav-item"><a class="main-nav-link" href="">Оплата</a></li>
+          <li class="main-nav-item"><a class="main-nav-link" href="">В кредит</a></li>
+          <li class="main-nav-item"><a class="main-nav-link" href="">Доставка</a></li>
+          <li class="main-nav-item"><a class="main-nav-link" href="">Гарантии</a></li>
+          <li class="main-nav-item"><a class="main-nav-link" href="">Контакты</a></li>
         </ul>
-        <input type="text">
-        <button type="button">Найти</button>
+        <form class="main-search-form ">
+          <label class="visually-hidden" for="main-search">Поиск</label>
+          <input class="main-search" type="text" id="main-search" placeholder="Название модели, раздела">
+          <button class="main-search-button" type="submit">Найти</button>
+        </form>
+        <a class="mobile-cart-link" href=""><span class="visually-hidden">Моя корзина</span></a>
       </nav>
     </div>
+
   </header>
 
-  <main>
-    <aside>
-      <h2>Типы товаров</h2>
-      <ul>
-        <li><a href="index.html">Фототехника</a></li>
-        <li><a href="category-cameras.html">Цифровые фотоаппараты</a></li>
-        <li><a href="category-lens.html">Объективы</a></li>
-        <li><a href="">Фотоспышки</a></li>
-        <li><a href="">Светофильтры</a></li>
-        <li><a href="category-photo-bags.html">Фотосумки</a></li>
-        <li><a href="">Штативы, моноподы</a></li>
-        <li><a href="">Карты памяти</a></li>
-        <li><a href="">Накамерный свет LED</a></li>
-        <li><a href="">Микрофоны выносные</a></li>
-        <li><a href="">Калибраторы и шкалы</a></li>
-        <li><a href="">Подводные боксы</a></li>
-        <li><a href="">Аксессуары и опции</a></li>
+  <main class="main category-main container">
+    <section class="products-categories">
+      <h2 class="product-categories-title visually-hidden">Типы товаров</h2>
+      <ul class="product-categories-list">
+        <li class="product-categories-item"><a class="product-categories-link" href="index.html">Фототехника</a></li>
+        <li class="product-categories-item"><a class="product-categories-link"
+            href="category-cameras.html">Цифровые
+            фотоаппараты</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="category-lens.html">Объективы</a>
+        </li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Фотоспышки</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Светофильтры</a></li>
+        <li class="product-categories-item active-category"><a class="product-categories-link"
+            href="category-photo-bags.html">Фотосумки</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Штативы,
+            моноподы</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Карты
+            памяти</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Накамерный
+            свет LED</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Микрофоны
+            выносные</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Калибраторы и
+            шкалы</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Подводные
+            боксы</a></li>
+        <li class="product-categories-item"><a class="product-categories-link" href="">Аксессуары и
+            опции</a></li>
       </ul>
-      <a href="">Баннер: Купить в кредит не выходя из дома</a>
-    </aside>
 
-    <section>
-      <h2>Фотосумки</h2>
+      <aside class="aside-advertisement">
+        <a class="aside-advertisement-link" href=""><span class="visually-hidden">Баннер: Купить в
+            кредит не выходя из
+            дома</span></a>
+      </aside>
+    </section>
 
-      <ul>
-        <li>
-          <article>
-            <a href="">
-              <h3>Cullmanns XCU outdoor Maxima 530+</h3>
-            </a>
-            <img src="img/product-img-8.jpg" width="180" height="180" alt="Товар Cullmanns XCU outdoor Maxima 530+">
-            <ins>27 200 руб.</ins>
-            <i>Товар №E7361 Склад</i>
-            <button type="button">Купить</button>
+    <section class="products-novelty">
+      <div class="title-wrapper">
+        <h2 class="products-novelty-title title">Фотосумки</h2>
+
+      </div>
+
+      <ul class="list-reset products-novelty-list">
+        <li class="products-novelty-item">
+          <article class="product-card">
+            <div class="product-info-wrapper">
+              <a class="product-title-link" href="">
+                <h3 class="product-title">Cullmanns XCU outdoor Maxima 530+</h3>
+              </a>
+              <ins class="product-price">17 500 <span class="product-price-currency">руб.</span></ins>
+              <p class="product-supply-number">Товар №E7361 Склад</p>
+            </div>
+            <div class="img-button-wrapper">
+              <img class="product-img" src="img/product-img-9.jpg" width="82" height="82"
+                alt="Товар Cullmanns XCU outdoor Maxima 530+">
+              <a class="product-buy-button" href="">Купить</a>
+            </div>
           </article>
         </li>
-        <li>
-          <article>
-            <a href="">
-              <h3>Hama Multitrans 170</h3>
-            </a>
-            <img src="img/product-img-10.jpg" width="180" height="180" alt="Товар Hama Multitrans 170">
-            <ins>27 200 руб.</ins>
-            <i>Товар №E7362 Склад</i>
-            <button type="button">Купить</button>
+        <li class="products-novelty-item">
+          <article class="product-card">
+            <div class="product-info-wrapper">
+              <a class="product-title-link" href="">
+                <h3 class="product-title">Hama Multitrans 170
+                </h3>
+              </a>
+              <ins class="product-price">17 500 <span class="product-price-currency">руб.</span></ins>
+              <p class="product-supply-number">Товар №E7362 Склад</p>
+            </div>
+            <div class="img-button-wrapper">
+              <img class="product-img" src="img/product-img-8.jpg" width="82" height="82"
+                alt="Товар Hama Multitrans 170">
+              <a class="product-buy-button" href="">Купить</a>
+            </div>
           </article>
         </li>
-        <li>
-          <article>
-            <a href="">
-              <h3>Сумка Manfrotto Street Holster (MS-H-IGR)</h3>
-            </a>
-            <img src="img/product-img-8.jpg" width="180" height="180"
-              alt="Товар Сумка Manfrotto Street Holster (MS-H-IGR)">
-            <ins>24 480 руб.</ins>
-            <i>Товар №E7363 Склад</i>
-            <button type="button">Купить</button>
+        <li class="products-novelty-item">
+          <article class="product-card">
+            <div class="product-info-wrapper">
+              <a class="product-title-link" href="">
+                <h3 class="product-title">Fujinon XF 16-80mm F4 R OIS WR</h3>
+              </a>
+              <ins class="product-price">39 990 <span class="product-price-currency">руб.</span></ins>
+              <p class="product-supply-number">Товар №E7363 Склад</p>
+            </div>
+            <div class="img-button-wrapper">
+              <img class="product-img" src="img/product-img-9.jpg" width="82" height="82"
+                alt="Товар Fujinon XF 16-80mm F4 R OIS WR">
+              <a class="product-buy-button" href="">Купить</a>
+            </div>
           </article>
         </li>
-        <li>
-          <article>
-            <a href="">
-              <h3>Сумка KATA Grip-14 DL Grey (KATA KT DL-G-14-G)</h3>
-            </a>
-            <img src="img/product-img-10.jpg" width="180" height="180"
-              alt="Товар Сумка KATA Grip-14 DL Grey (KATA KT DL-G-14-G)">
-            <ins>27200 руб.</ins>
-            <i>Товар №E7594 Склад</i>
-            <button type="button">Купить</button>
+        <li class="products-novelty-item">
+          <article class="product-card">
+            <div class="product-info-wrapper">
+              <a class="product-title-link" href="">
+                <h3 class="product-title">Cullmanns XCU outdoor Maxima 530+</h3>
+              </a>
+              <ins class="product-price">57 500 <span class="product-price-currency">руб.</span></ins>
+              <p class="product-supply-number">Товар №E7547 Склад</p>
+            </div>
+            <div class="img-button-wrapper">
+              <img class="product-img" src="img/product-img-8.jpg" width="82" height="82"
+                alt="Товар Cullmanns XCU outdoor Maxima 530+">
+              <a class="product-buy-button" href="">Купить</a>
+            </div>
           </article>
         </li>
-        <li>
-          <article>
-            <a href="">
-              <h3>Сумка Case Logic SLRС203</h3>
-            </a>
-            <img src="img/product-img-8.jpg" width="180" height="180" alt="Товар Сумка Case Logic SLRС203">
-            <ins>27200 руб.</ins>
-            <i>Товар №E7733 Склад</i>
-            <button type="button">Купить</button>
+        <li class="products-novelty-item">
+          <article class="product-card">
+            <div class="product-info-wrapper">
+              <a class="product-title-link" href="">
+                <h3 class="product-title">Hama Multitrans 170</h3>
+              </a>
+              <ins class="product-price">17 500 <span class="product-price-currency">руб.</span></ins>
+              <p class="product-supply-number">Товар №E7594 Склад</p>
+            </div>
+            <div class="img-button-wrapper">
+              <img class="product-img" src="img/product-img-9.jpg" width="82" height="82"
+                alt="Товар Hama Multitrans 170">
+              <a class="product-buy-button" href="">Купить</a>
+            </div>
           </article>
         </li>
-        <li>
-          <article>
-            <a href="">
-              <h3>Сумка Case Logic Kontrast S Shoulder Bag DILC</h3>
-            </a>
-            <img src="img/product-img-10.jpg" width="180" height="180"
-              alt="Товар Сумка Case Logic Kontrast S Shoulder Bag DILC">
-            <ins>27200 руб.</ins>
-            <i>Товар №E7733 Склад</i>
-            <button type="button">Купить</button>
+        <li class="products-novelty-item">
+          <article class="product-card">
+            <div class="product-info-wrapper">
+              <a class="product-title-link" href="">
+                <h3 class="product-title">Fujinon XF 16-80mm F4 R OIS WR
+                </h3>
+              </a>
+              <ins class="product-price">17 500 <span class="product-price-currency">руб.</span></ins>
+              <p class="product-supply-number">Товар №E7733 Склад</p>
+            </div>
+            <div class="img-button-wrapper">
+              <img class="product-img" src="img/product-img-8.jpg" width="82" height="82"
+                alt="Товар Fujinon XF 16-80mm F4 R OIS WR">
+              <a class="product-buy-button" href="">Купить</a>
+            </div>
           </article>
         </li>
-        <li>
-          <article>
-            <a href="">
-              <h3>Сумка Case Logic DCB306K</h3>
-            </a>
-            <img src="img/product-img-8.jpg" width="180" height="180" alt="Товар Сумка Case Logic DCB306K">
-            <ins>27200 руб.</ins>
-            <i>Товар №E7733 Склад</i>
-            <button type="button">Купить</button>
+        <li class="products-novelty-item">
+          <article class="product-card">
+            <div class="product-info-wrapper">
+              <a class="product-title-link" href="">
+                <h3 class="product-title">Cullmanns XCU outdoor Maxima 530+</h3>
+              </a>
+              <ins class="product-price">17 500 <span class="product-price-currency">руб.</span></ins>
+              <p class="product-supply-number">Товар №E7361 Склад</p>
+            </div>
+            <div class="img-button-wrapper">
+              <img class="product-img" src="img/product-img-9.jpg" width="82" height="82"
+                alt="Товар Cullmanns XCU outdoor Maxima 530+">
+              <a class="product-buy-button" href="">Купить</a>
+            </div>
           </article>
         </li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <a href="mailto:danya.tvorun.88@mail.ru">Задайте вопросы по электронной почте</a>
+  <footer class="footer">
+    <div class="footer-content-wrapper container">
+      <p class="footer-email-text">О сотрудничестве и по другим вопросам:<br><a class="footer-email-link"
+          href="mailto:danya.tvorun.88@mail.ru">danya.tvorun.88@mail.ru</a></p>
 
-    <div>
-      <a href="https://ru-ru.facebook.com/">Facebook</a>
-      <a href="https://twitter.com/">Twitter</a>
-      <a href="https://vk.com/dancanadian">VK</a>
-      <a href="https://ok.ru/">OK</a>
+      <ul class="list-reset footer-socials-list">
+        <li class="socials-item"><a class="socials-link socials-fb" href="https://ru-ru.facebook.com/"><img
+              class="socials-img" src="/img/fb.png" width="35" height="35" alt="Facebook"><span
+              class="visually-hidden">Facebook</span></a>
+        </li>
+        <li class="socials-item"><a class="socials-link socials-tw" href="https://twitter.com/"><img class="socials-img"
+              src="/img/tw.png" width="35" height="35" alt="Facebook"><span class="visually-hidden">Facebook</span></a>
+        </li>
+        <li class="socials-item"><a class="socials-link socials-vk" href="https://vk.com/dancanadian"><img
+              class="socials-img" src="/img/vk.png" width="35" height="35" alt="Вконтакте"><span
+              class="visually-hidden">VK</span></a></li>
+        <li class="socials-item"><a class="socials-link socials-ok" href="https://ok.ru/"><img class="socials-img"
+              src="/img/odnoklassniki3.png" width="35" height="35" alt="Одноклассники"><span
+              class="visually-hidden">OK</span></a></li>
+      </ul>
     </div>
   </footer>
+
+  <section class="modal modal-menu">
+    <h2 class="modal-menu-title visually-hidden">Меню</h2>
+
+    <button class="modal-menu-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <ul class="modal-main-nav-list">
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="news.html">Новости</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">О компании</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Оплата</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">В кредит</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Доставка</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Гарантии</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Контакты</a></li>
+    </ul>
+
+    <ul class="modal-product-categories-list">
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link"
+          href="index.html">Фототехника</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link"
+          href="category-cameras.html">Цифровые
+          фотоаппараты</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link"
+          href="category-lens.html">Объективы</a>
+      </li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Фотоспышки</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Светофильтры</a></li>
+      <li class="modal-product-categories-item active-category"><a class="modal-product-categories-link"
+          href="category-photo-bags.html">Фотосумки</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Штативы,
+          моноподы</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Карты
+          памяти</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Накамерный
+          свет LED</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Микрофоны
+          выносные</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Калибраторы и
+          шкалы</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Подводные
+          боксы</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Аксессуары и
+          опции</a></li>
+    </ul>
+  </section>
+
+  <section class="modal modal-login">
+    <h2 class="modal-login-title visually-hidden">Авторизация</h2>
+
+    <button class="modal-login-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+
+    <ul class="modal-login-list">
+      <li class="modal-login-item"><a class="modal-login-link modal-login-link" href="">Вход с паролем</a></li>
+      <li class="modal-login-item"><a class="modal-login-link modal-signin-link" href="">Регистрация</a><br></li>
+      <li class="modal-login-item">
+        <p class="modal-products-counter">Товары: 0 шт.</p>
+      </li>
+    </ul>
+
+    <script src="js/modal-menu.js"></script>
+    <script src="js/modal-login.js"></script>
+  </section>
 </body>
 
 </html>

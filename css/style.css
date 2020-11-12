@@ -670,7 +670,6 @@ a {
   background-position: 0 0;
   background-repeat: repeat;
   box-shadow: 0 5px 12px var(--black);
-  position: fixed;
 }
 
 .modal-menu-open-button,

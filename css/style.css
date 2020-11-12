@@ -382,6 +382,10 @@ a {
   gap: 10px;
 }
 
+.category-main {
+  grid-template-rows: none;
+}
+
 /* PRODUCTS-CATEGORIES */
 .products-categories {
   border-right: 2px var(--border-grey) solid;
@@ -664,9 +668,6 @@ a {
 .modal {
   display: none;
   position: absolute;
-  /* transform: translateX(-50%); */
-  /* color: var(--black);
-  background-color: var(--white); */
   background-position: 0 0;
   background-repeat: repeat;
   box-shadow: 0 5px 12px var(--black);
@@ -820,6 +821,14 @@ a {
     max-width: 750px;
   }
 
+  .main {
+    grid-template-rows: 100px;
+  }
+
+  .category-main {
+    grid-template-rows: none;
+  }
+
   .main-nav-list {
     width: 400px;
     margin: 0 15px;
@@ -846,7 +855,7 @@ a {
   }
 }
 
-@media (max-width: 710px) {
+@media (max-width: 730px) {
   .container {
     max-width: 500px;
     margin: 0 auto;
@@ -930,6 +939,10 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .category-main {
+    grid-template-rows: none;
+  }
+
   .products-categories {
     display: none;
   }
@@ -946,5 +959,64 @@ a {
   .modal-menu-open-button,
   .modal-login-open-button {
     display: block;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    max-width: 430px;
+  }
+
+  .main {
+    grid-template-rows: min-content min-content;
+  }
+
+  .category-main {
+    grid-template-rows: none;
+  }
+
+  .popular-producers-banner {
+    display: none;
+  }
+
+  .products-novelty,
+  .products-best-price {
+    margin-top: 15px;
+  }
+
+  .products-novelty-list,
+  .products-best-price-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .product-card {
+    width: 400px;
+    justify-content: space-between;
+  }
+
+  .product-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    width: 300px;
+    min-height: 60px;
+    margin: 0;
+    text-decoration: underline;
+    color: var(--text-brown);
+  }
+
+  .product-price {
+    font-size: 21px;
+  }
+  .product-price-currency {
+    font-size: 14px;
+  }
+  .product-supply-number {
+    font-size: 14px;
+    width: 120px;
+  }
+  .product-buy-button {
+    font-size: 18px;
   }
 }

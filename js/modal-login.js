@@ -13,3 +13,13 @@ modalLoginClose.addEventListener("click", function (evt) {
 
   modalLogin.classList.remove("modal-show");
 })
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.key === "Escape") {
+    if (modalLogin.classList.contains("modal-show")) {
+      evt.preventDefault();
+
+      modalLogin.classList.remove("modal-show");
+    }
+  }
+})

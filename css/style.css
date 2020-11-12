@@ -145,7 +145,6 @@
 }
 
 body {
-  min-width: 1300px;
   margin: 0;
   padding: 0;
   font-family: "airborne","Arial", sans-serif;
@@ -195,7 +194,7 @@ a {
 }
 
 .container {
-  width: 1290px;
+  max-width: 1290px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -297,7 +296,7 @@ a {
   top: 50%;
   left: 0;
   transform: translate(0px, -50%);
-  background-image: url("../img/korz_1.png");
+  background-image: url("../img/cart-small-img.png");
 }
 
 .products-counter {
@@ -310,6 +309,7 @@ a {
 .header-bottom-wrapper {
   background-color: var(--basic-brown);
   border-bottom: 7px var(--basic-red) solid;
+  position: relative;
 }
 
 .main-nav {
@@ -343,11 +343,15 @@ a {
   text-decoration: none;
 }
 
-.main-search-form {
+.mobile-cart-link {
+  display: none;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
+}
+
+.main-search-form {
+  float: right;
+  transform: translateY(-90%);
+  position: relative;
 }
 
 .main-search,
@@ -360,10 +364,12 @@ a {
 }
 
 .main-search-button {
+  cursor: pointer;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   border-radius: 3px;
+  position: relative;
 }
 
 /*=== MAIN ===*/
@@ -371,7 +377,7 @@ a {
   margin-top: 10px;
   padding: 0;
   display: grid;
-  grid-template-columns: 220px 1fr 1fr 315px;
+  grid-template-columns: 205px 1fr 1fr 315px;
   grid-template-rows: 170px;
   gap: 10px;
 }
@@ -448,6 +454,7 @@ a {
 }
 
 .news-search-button {
+  cursor: pointer;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -646,8 +653,298 @@ a {
 
 .footer-socials-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .socials-item {
   margin-left: 15px;
+}
+
+/*=== MODAL ===*/
+.modal {
+  display: none;
+  position: absolute;
+  /* transform: translateX(-50%); */
+  /* color: var(--black);
+  background-color: var(--white); */
+  background-position: 0 0;
+  background-repeat: repeat;
+  box-shadow: 0 5px 12px var(--black);
+  position: fixed;
+}
+
+.modal-menu-open-button,
+.modal-login-open-button {
+  cursor: pointer;
+  display: none;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  margin-left: 60px;
+}
+
+.modal-menu-open-button::after,
+.modal-login-open-button::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 5px;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.modal-menu-close-button,
+.modal-login-close-button {
+  float: right;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+
+.modal-login-close-button::after,
+.modal-menu-close-button::after {
+  content: "";
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 5px;
+  right: 12px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url("../img/close-icon.svg");
+}
+
+.modal-show {
+  display: block;
+  animation: slideout 0.6s;
+}
+
+@keyframes slideout {
+  0% {
+    transform: translateX(300px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* MODAL-MENU */
+.modal-menu {
+  background-color: var(--basic-brown);
+  top: 0;
+  right: 0;
+}
+
+.modal-main-nav-list,
+.modal-product-categories-list {
+  margin: 0;
+  padding: 15px 25px;
+  list-style: none;
+  border-bottom: 2px var(--basic-orange) solid;
+}
+
+.modal-main-nav-item,
+.modal-product-categories-item,
+.modal-login-item {
+  margin-bottom: 10px;
+}
+
+.modal-main-nav-link,
+.modal-product-categories-link,
+.modal-login-link {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.modal-main-nav-link,
+.modal-login-link {
+  color: var(--basic-orange);
+}
+
+.modal-product-categories-link,
+.modal-products-counter {
+  color: var(--basic-red);
+}
+
+.modal-menu-open-button::after {
+  background-image: url("../img/menu-icon.svg");
+}
+
+/* MODAL-LOGIN */
+.modal-login {
+  background-color: var(--basic-brown);
+  top: 0;
+  right: 0;
+}
+
+.modal-login-list {
+  margin-top: 30px;
+  padding: 15px 25px 0;
+  list-style: none;
+}
+
+.modal-login-open-button::after {
+  background-image: url("../img/login-icon.svg");
+}
+
+/*=== MEDIA QUERIES ===*/
+@media (max-width: 1290px) {
+  .container {
+    max-width: 970px;
+  }
+
+  .main-nav-list {
+    margin: 0 0 0 20px;
+  }
+
+  .news-aside {
+    display: none;
+  }
+
+  .popular-producers-banner {
+    width: 700px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+
+  .main-nav-list {
+    width: 400px;
+    margin: 0 15px;
+  }
+
+  .products-novelty-list,
+  .products-best-price-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .popular-producers-banner {
+    width: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 710px;
+  }
+
+  .popular-producers-banner {
+    width: 470px;
+  }
+}
+
+@media (max-width: 710px) {
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .header-top-wrapper {
+    justify-content: left;
+  }
+
+  .header-logo-slogan-wrapper {
+    flex-grow: 1;
+  }
+
+  .header-logo-slogan-wrapper {
+    margin: 0 0 5px 0;
+  }
+
+  .logo-img {
+    width: 150px;
+    height: 41px;
+  }
+
+  .header-main-slogan {
+    font-size: 9px;
+  }
+
+  .contacts-login-wrapper {
+    display: none;
+  }
+
+  .main-nav {
+    padding: 20px;
+  }
+
+  .main-nav-list {
+    display: none;
+  }
+
+  .mobile-cart-link {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    top: 2px;
+    left: 30px;
+    background-image: url("../img/cart-big-img.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .mobile-cart-link {
+    display: inline-block;
+  }
+
+  .main-search-form {
+    transform: translateY(-50%);
+  }
+
+  .main-search {
+    height: 30px;
+  }
+
+  .main-search-button {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background-color: transparent;
+    color: transparent;
+    border: transparent;
+  }
+
+  .main-search-button::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 0;
+    background-image: url("../img/search-icon.svg");
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .products-categories {
+    display: none;
+  }
+
+  .popular-producers-banner {
+    width: 470px;
+  }
+
+  .products-novelty-list,
+  .products-best-price-list {
+    gap: 20px;
+  }
+
+  .modal-menu-open-button,
+  .modal-login-open-button {
+    display: block;
+  }
 }

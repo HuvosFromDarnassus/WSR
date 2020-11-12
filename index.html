@@ -15,8 +15,8 @@
   <header class="header">
     <div class="header-top-wrapper container">
       <div class="header-logo-slogan-wrapper">
-        <a class="header-logo-link" href=""><img src="img/Logo.png" alt="Логотип-Portal FOTO" width="203"
-            height="56" /></a>
+        <a class="header-logo-link" href=""><img class="logo-img" src="img/Logo.png" alt="Логотип-Portal FOTO"
+            width="203" height="56" /></a>
         <h1 class="header-main-slogan">профессиональная фототехника</h1>
       </div>
 
@@ -38,6 +38,9 @@
           <p class="products-counter">Товары: 0 шт.</p>
         </div>
       </div>
+
+      <button class="modal-login-open-button" type="button"><span class="visually-hidden">login</span></button>
+      <button class="modal-menu-open-button" type="button"><span class="visually-hidden">меню</span></button>
     </div>
 
     <div class="header-bottom-wrapper">
@@ -54,8 +57,9 @@
         <form class="main-search-form ">
           <label class="visually-hidden" for="main-search">Поиск</label>
           <input class="main-search" type="text" id="main-search" placeholder="Название модели, раздела">
-          <button class="main-search-button" type="button">Найти</button>
+          <button class="main-search-button" type="submit">Найти</button>
         </form>
+        <a class="mobile-cart-link" href=""><span class="visually-hidden">Моя корзина</span></a>
       </nav>
     </div>
 
@@ -109,7 +113,7 @@
       <form class="news-search-form">
         <label class="visually-hidden" for="news-search">Поиск новостей:</label>
         <input class="news-search" type="text" id="news-search" placeholder="Новость">
-        <button class="button news-search-button" type="button">Найти</button>
+        <button class="button news-search-button" type="submit">Найти</button>
       </form>
 
       <ul class="list-reset news-list">
@@ -362,6 +366,63 @@
       </ul>
     </div>
   </footer>
+
+  <section class="modal modal-menu">
+    <button class="modal-menu-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <ul class="modal-main-nav-list">
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="news.html">Новости</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">О компании</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Оплата</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">В кредит</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Доставка</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Гарантии</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Контакты</a></li>
+    </ul>
+
+    <ul class="modal-product-categories-list">
+      <li class="modal-product-categories-item active-category"><a class="modal-product-categories-link"
+          href="index.html">Фототехника</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link"
+          href="category-cameras.html">Цифровые
+          фотоаппараты</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link"
+          href="category-lens.html">Объективы</a>
+      </li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Фотоспышки</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Светофильтры</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link"
+          href="category-photo-bags.html">Фотосумки</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Штативы,
+          моноподы</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Карты
+          памяти</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Накамерный
+          свет LED</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Микрофоны
+          выносные</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Калибраторы и
+          шкалы</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Подводные
+          боксы</a></li>
+      <li class="modal-product-categories-item"><a class="modal-product-categories-link" href="">Аксессуары и
+          опции</a></li>
+    </ul>
+  </section>
+
+  <section class="modal modal-login">
+    <button class="modal-login-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+
+    <ul class="modal-login-list">
+      <li class="modal-login-item"><a class="modal-login-link modal-login-link" href="">Вход с паролем</a></li>
+      <li class="modal-login-item"><a class="modal-login-link modal-signin-link" href="">Регистрация</a><br></li>
+      <li class="modal-login-item">
+        <p class="modal-products-counter">Товары: 0 шт.</p>
+      </li>
+    </ul>
+  </section>
+
+  <script src="js/modal-menu.js"></script>
+  <script src="js/modal-login.js"></script>
 </body>
 
 </html>

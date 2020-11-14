@@ -1,3 +1,11 @@
+<?php
+  require_once("../WSR/php/connect_db.php");
+  require_once("../WSR/php/news_add.php");
+
+  $result = mysqli_query($con, "SELECT * FROM news ORDER BY `id` DESC");
+  $myrow = mysqli_fetch_assoc($result);
+?>
+
 <!DOCTYPE html>
 <html lang="ru" class="page">
 
@@ -5,7 +13,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Главная</title>
 </head>
 
@@ -117,50 +125,27 @@
       </form>
 
       <ul class="list-reset news-list">
-        <li class="news-item">
-          <article class="news-body">
-            <div class="news-body-top">
-              <h3 class="news-title">Компания Sony выпустила анонс нового поколения камер Alpha</h3>
-              <time class="news-pubdate" datetime="2020-11-05">5 Наяб</time>
-            </div>
-            <p class="news-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
-              magni maxime ducimus
-              natus sint asperiores
-              culpa, officiis tempora iusto possimus odio eius deleniti, sapiente cum libero minus
-              ad, nam magnam?</p>
-            <a class="news-comments-link" href="">Комментарии</a>
-          </article>
+        <li class="news-item add-news-item">
+          <button class="add-news-button">Добавить новость</button>
         </li>
-        <li class="news-item">
-          <article class="news-body">
-            <div class="news-body-top">
-              <h3 class="news-title">30 невероятных снимков от победителей конкурса International
-                Photography Awards</h3>
-              <time class="news-pubdate" datetime="2020-10-29">29 Окт</time>
-            </div>
-            <p class="news-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
-              magni maxime ducimus
-              natus sint asperiores
-              culpa, officiis tempora iusto possimus odio eius deleniti, sapiente cum libero minus
-              ad, nam magnam?</p>
-            <a class="news-comments-link" href="">Комментарии</a>
-          </article>
-        </li>
-        <li class="news-item">
-          <article class="news-body">
-            <div class="news-body-top">
-              <h3 class="news-title">Фото с Земли, которые обязательно должны увидеть инопланетяне
-              </h3>
-              <time class="news-pubdate" datetime="2020-10-17">17 Окт</time>
-            </div>
-            <p class="news-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
-              magni maxime ducimus
-              natus sint asperiores
-              culpa, officiis tempora iusto possimus odio eius deleniti, sapiente cum libero minus
-              ad, nam magnam?</p>
-            <a class="news-comments-link" href="">Комментарии</a>
-          </article>
-        </li>
+
+        <?php
+          do {
+            printf('<li class="news-item">
+                      <article class="news-body">
+                        <div class="news-body-top">
+                          <h3 class="news-title">%s</h3>
+                          <time class="news-pubdate" datetime="2020-11-05">%s</time>
+                        </div>
+                        <p class="news-text">%s</p>
+                      </article>
+                    </li>',
+                    $myrow['news_title'],
+                    date('d F', strtotime($myrow['news_date'])),
+                    $myrow['news_text']
+              );
+          } while ($myrow = mysqli_fetch_assoc($result));
+        ?>
       </ul>
     </aside>
 
@@ -425,8 +410,29 @@
     </ul>
   </section>
 
+  <section class="modal-news-admin">
+    <h2 class="news-admin-title">Добавить новость</h2>
+    <form class="news-admin-form" method="post">
+      <label class="news-admin-input visually-hidden" for="title-edit-input visually-hidden">Заголовок</label>
+      <input class="news-admin-title-input" name="news_title" type="text" id="title-edit-input" placeholder="Заголовок новости">
+
+      <label class="news-admin-input visually-hidden" for="text-edit-area visually-hidden">Текст</label>
+      <textarea class="news-admin-text-area" name="news_text" id="text-edit-area" cols="50" rows="10" placeholder="Текст новости"></textarea>
+
+      <button class="news-admin-button" name="create" type="submit">Подтвердить</button>
+      <button class="modal-admin-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+    </form>
+  </section>
+
   <script src="js/modal-menu.min.js"></script>
   <script src="js/modal-login.min.js"></script>
+  <script src="js/modal-news-admin.js"></script>
 </body>
 
 </html>
+
+<!-- TODO:
+3) Сделать авторизацию для админа (логин, пароль)
+(при вводе правильных значений отобразить модальное окно)
+
+4) Сделать отдельную страницу для новостей -->

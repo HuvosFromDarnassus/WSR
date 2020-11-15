@@ -1,9 +1,8 @@
 <?php
+  // ИМПОРТ ДРУГИХ ДОКУМЕНТОВ
+
   require_once("../WSR/php/connect_db.php");
   require_once("../WSR/php/news_add.php");
-
-  $result = mysqli_query($con, "SELECT * FROM news ORDER BY `id` DESC");
-  $myrow = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -129,7 +128,11 @@
           <button class="add-news-button">Добавить новость</button>
         </li>
 
+        <!--=== ВЫВОД НОВОСТЕЙ ИЗ БД ===-->
         <?php
+          $result = mysqli_query($con, "SELECT * FROM news ORDER BY `id` DESC");
+          $myrow = mysqli_fetch_assoc($result);
+
           do {
             printf('<li class="news-item">
                       <article class="news-body">
@@ -410,29 +413,43 @@
     </ul>
   </section>
 
-  <section class="modal-news-admin">
-    <h2 class="news-admin-title">Добавить новость</h2>
-    <form class="news-admin-form" method="post">
-      <label class="news-admin-input visually-hidden" for="title-edit-input visually-hidden">Заголовок</label>
-      <input class="news-admin-title-input" name="news_title" type="text" id="title-edit-input" placeholder="Заголовок новости">
+  <section class="news-admin-signin">
+    <h2 class="admin-signin-title">Войти как администратор</h2>
 
-      <label class="news-admin-input visually-hidden" for="text-edit-area visually-hidden">Текст</label>
-      <textarea class="news-admin-text-area" name="news_text" id="text-edit-area" cols="50" rows="10" placeholder="Текст новости"></textarea>
+    <form class="admin_signin_form admin-signin-form" method="POST">
+      <label for="admin-login visually-hidden" class="admin-label visually-hidden"></label>
+      <input class="admin-signin-input admin-login-input" name="admin_login" id="admin-login" type="text" placeholder="Логин">
 
-      <button class="news-admin-button" name="create" type="submit">Подтвердить</button>
-      <button class="modal-admin-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <label for="admin-password visually-hidden" class="admin-label visually-hidden"></label>
+      <input class="admin-signin-input dmin-password-input" name="admin_password" id="admin-password" type="text" placeholder="Пароль">
+
+      <button name="signin" class="admin-signin-button" type="submit" ">Войти</button>
+      <button class="admin-sighin-close-buttom" type="button"><span class="visually-hidden">Закрыть</span></button>
     </form>
   </section>
 
+  <?php
+    // === АВТОРИЗАЦИЯ АДМИНА ===
+
+    // ПРОБЛЕМА: Если ввести логин и пароль разных админов
+    // (логин одного админа и пароль другого) - авторизация пройдет
+
+    $login = textboxValue("admin_login");
+    $password = textboxValue("admin_password");
+
+    $result_admin_logins = mysqli_query($con, 'SELECT id FROM admins WHERE login="' . $login . '"');
+    $result_admin_passwords = mysqli_query($con, 'SELECT id FROM admins WHERE password="' . $password . '"');
+
+    if (mysqli_num_rows($result_admin_logins) > 0 &&
+    mysqli_num_rows($result_admin_passwords) > 0) {
+      printNewsModal();
+    }
+  ?>
+
   <script src="js/modal-menu.min.js"></script>
   <script src="js/modal-login.min.js"></script>
+  <script src="js/modal-admin-signin.js"></script>
   <script src="js/modal-news-admin.js"></script>
 </body>
 
 </html>
-
-<!-- TODO:
-3) Сделать авторизацию для админа (логин, пароль)
-(при вводе правильных значений отобразить модальное окно)
-
-4) Сделать отдельную страницу для новостей -->

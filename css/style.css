@@ -846,8 +846,10 @@ a {
   background-image: url("../img/menu-icon.svg");
 }
 
+/* MODAL-ADMIN-SIGNIN */
 /* MODAL-NEWS-ADMIN */
-.modal-news-admin {
+.modal-news-admin,
+.news-admin-signin {
   position: absolute;
   visibility: hidden;
   top: 30%;
@@ -856,20 +858,24 @@ a {
   background-color: var(--white);
   width: 550px;
   padding-bottom: 10px;
+  box-shadow: 0 5px 12px var(--black);
 }
 
-.news-admin-title {
+.news-admin-title,
+.admin-signin-title {
   text-align: center;
   color: var(--basic-orange);
 }
 
-.news-admin-form {
+.news-admin-form,
+.admin-signin-form {
   display: grid;
   width: 500px;
   margin: 0 auto;
 }
 
-.news-admin-title-input {
+.news-admin-title-input,
+.admin-signin-input {
   margin-bottom: 10px;
   border-radius: 3px;
   padding: 5px;
@@ -881,14 +887,16 @@ a {
   padding: 5px;
 }
 
-.news-admin-button {
+.news-admin-button,
+.admin-signin-button {
   border-radius: 3px;
   width: 200px;
   margin: 0 auto;
   padding: 5px;
 }
 
-.modal-admin-close-button {
+.modal-admin-close-button,
+.admin-sighin-close-buttom {
   position: absolute;
   width: 33px;
   height: 33px;

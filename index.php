@@ -22,7 +22,7 @@
   <header class="header">
     <div class="header-top-wrapper container">
       <div class="header-logo-slogan-wrapper">
-        <a class="header-logo-link" href=""><img class="logo-img" src="img/Logo.png" alt="Логотип-Portal FOTO"
+        <a class="header-logo-link" href="index.php"><img class="logo-img" src="img/Logo.png" alt="Логотип-Portal FOTO"
             width="203" height="56" /></a>
         <h1 class="header-main-slogan">профессиональная фототехника</h1>
       </div>
@@ -53,7 +53,7 @@
     <div class="header-bottom-wrapper">
       <nav class="main-nav container">
         <ul class="list-reset main-nav-list">
-          <li class="main-nav-item"><a class="main-nav-link" href="news.html">Новости</a></li>
+          <li class="main-nav-item"><a class="main-nav-link" href="news.php">Новости</a></li>
           <li class="main-nav-item"><a class="main-nav-link" href="">О компании</a></li>
           <li class="main-nav-item"><a class="main-nav-link" href="">Оплата</a></li>
           <li class="main-nav-item"><a class="main-nav-link" href="">В кредит</a></li>

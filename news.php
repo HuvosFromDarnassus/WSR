@@ -12,7 +12,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Новости</title>
 </head>
 
@@ -126,6 +126,35 @@
       </ul>
     </div>
   </footer>
+
+  <section class="modal modal-menu">
+    <h2 class="modal-menu-title visually-hidden">Меню</h2>
+
+    <button class="modal-menu-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <ul class="modal-main-nav-list">
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="news.php">Новости</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">О компании</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Оплата</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">В кредит</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Доставка</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Гарантии</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Контакты</a></li>
+    </ul>
+  </section>
+
+  <section class="modal modal-login">
+    <h2 class="modal-login-title visually-hidden">Авторизация</h2>
+
+    <button class="modal-login-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+
+    <ul class="modal-login-list">
+      <li class="modal-login-item"><a class="modal-login-link modal-login-link" href="">Вход с паролем</a></li>
+      <li class="modal-login-item"><a class="modal-login-link modal-signin-link" href="">Регистрация</a><br></li>
+      <li class="modal-login-item">
+        <p class="modal-products-counter">Товары: 0 шт.</p>
+      </li>
+    </ul>
+  </section>
 
   <section class="news-admin-signin">
     <h2 class="admin-signin-title">Войти как администратор</h2>

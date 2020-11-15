@@ -1000,6 +1000,10 @@ a {
     margin: 0 15px;
   }
 
+  .news-page-body-top {
+    grid-template-columns: 1fr;
+  }
+
   .products-novelty-list,
   .products-best-price-list {
     grid-template-columns: 1fr 1fr;
@@ -1139,6 +1143,11 @@ a {
 
   .popular-producers-banner {
     display: none;
+  }
+
+  .news-page-title {
+    font-size: 12px;
+    min-width: 370px;
   }
 
   .products-novelty,

@@ -360,7 +360,7 @@
 
     <button class="modal-menu-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
     <ul class="modal-main-nav-list">
-      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="news.html">Новости</a></li>
+      <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="news.php">Новости</a></li>
       <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">О компании</a></li>
       <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">Оплата</a></li>
       <li class="modal-main-nav-item"><a class="modal-main-nav-link" href="">В кредит</a></li>

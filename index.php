@@ -12,7 +12,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Главная</title>
 </head>
 
@@ -448,8 +448,8 @@
 
   <script src="js/modal-menu.min.js"></script>
   <script src="js/modal-login.min.js"></script>
-  <script src="js/modal-admin-signin.js"></script>
-  <script src="js/modal-news-admin.js"></script>
+  <script src="js/modal-admin-signin.min.js"></script>
+  <script src="js/modal-news-admin.min.js"></script>
 </body>
 
 </html>

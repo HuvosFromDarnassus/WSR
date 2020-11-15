@@ -4,6 +4,13 @@ README файл, поэтому я решил записать сюда все �
 
 ||| Пути к файлам в проекте |||
 ===============================
+PHP:
+
+index.php
+news.php
+php/news_add.php
+php/connect_db.php
+
 CSS:
 
 css/normalize.min.css
@@ -11,7 +18,6 @@ css/style.min.css
 
 HTML:
 
-index.html
 category-cameras.html
 category-lens.html
 category-photo-bags.html
@@ -62,6 +68,8 @@ category-photo-bags.html
 
 JS:
 
+js/modal-admin-signin.min.js
+js/modal-news-admin.min.js
 js/modal-menu.min.js
 js/modal-login.min.js
 
@@ -178,6 +186,19 @@ WSR
   - modal-menu.js
   |
   - modal-menu.min.js
+  |
+  - modal-news-admin.js
+  |
+  - modal-news-admin.min.js
+  |
+  - modal-admin-signin.js
+  |
+  - modal-admin-signin.min.js
+-php
+  |
+  - connect_db.php
+  |
+  - news_add.php 
 |
 - category-cameras.html
 |
@@ -185,6 +206,8 @@ WSR
 |
 - category-photo-bags.html
 |
-- index.html
+- index.php
+|
+- news.php
 |
 README.txt

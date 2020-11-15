@@ -507,7 +507,7 @@ a {
 
 .news-body-top {
   display: grid;
-  grid-template-columns: 220px 40px;
+  grid-template-columns: 200px 40px;
 }
 
 .news-page-body-top {
@@ -1125,6 +1125,10 @@ a {
 }
 
 @media (max-width: 560px) {
+  .page > * {
+    overflow-x: hidden;
+  }
+
   .container {
     max-width: 430px;
   }

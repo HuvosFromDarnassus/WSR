@@ -12,7 +12,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Главная</title>
 </head>
 
@@ -137,14 +137,15 @@
             printf('<li class="news-item">
                       <article class="news-body">
                         <div class="news-body-top">
+                          <img class="news-img" src="img/product-img-12.jpg" alt="Изображение новости" width="60" height="60">
                           <h3 class="news-title">%s</h3>
-                          <time class="news-pubdate" datetime="2020-11-05">%s</time>
+                          <time class="news-pubdate">%s</time>
                         </div>
                         <p class="news-text">%s</p>
                       </article>
                     </li>',
                     $myrow['news_title'],
-                    date('d F', strtotime($myrow['news_date'])),
+                    date('d M', strtotime($myrow['news_date'])),
                     $myrow['news_text']
               );
           } while ($myrow = mysqli_fetch_assoc($result));

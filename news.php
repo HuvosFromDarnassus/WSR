@@ -1,8 +1,9 @@
 <?php
-  // ИМПОРТ ДРУГИХ ДОКУМЕНТОВ
+// ИМПОРТ ДРУГИХ ДОКУМЕНТОВ
 
-  require_once("../WSR/php/connect_db.php");
-  require_once("../WSR/php/news_add.php");
+require_once("../WSR/php/connect_db.php");
+require_once("../WSR/php/news_add.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -22,8 +23,7 @@
   <header class="header">
     <div class="header-top-wrapper container">
       <div class="header-logo-slogan-wrapper">
-        <a class="header-logo-link" href="index.php"><img class="logo-img" src="img/Logo.png" alt="Логотип-Portal FOTO"
-            width="203" height="56" /></a>
+        <a class="header-logo-link" href="index.php"><img class="logo-img" src="img/Logo.png" alt="Логотип-Portal FOTO" width="203" height="56" /></a>
         <h1 class="header-main-slogan">профессиональная фототехника</h1>
       </div>
 
@@ -45,6 +45,8 @@
           <p class="products-counter">Товары: 0 шт.</p>
         </div>
       </div>
+
+      <!-- Hello Linux -->
 
       <button class="modal-login-open-button" type="button"><span class="visually-hidden">login</span></button>
       <button class="modal-menu-open-button" type="button"><span class="visually-hidden">меню</span></button>
@@ -80,11 +82,12 @@
       </li>
 
       <?php
-          $result = mysqli_query($con, "SELECT * FROM news ORDER BY `id` DESC");
-          $myrow = mysqli_fetch_assoc($result);
+      $result = mysqli_query($con, "SELECT * FROM news ORDER BY `id` DESC");
+      $myrow = mysqli_fetch_assoc($result);
 
-          do {
-            printf('<li class="news-page-item">
+      do {
+        printf(
+          '<li class="news-page-item">
                       <article class="news-body">
                         <div class="news-page-body-top">
                           <h3 class="news-page-title">%s</h3>
@@ -93,36 +96,28 @@
                         <p class="news-page-text">%s</p>
                       </article>
                     </li>',
-                    $myrow['news_title'],
-                    date('d F', strtotime($myrow['news_date'])),
-                    $myrow['news_text']
-              );
-          } while ($myrow = mysqli_fetch_assoc($result));
-        ?>
+          $myrow['news_title'],
+          date('d F', strtotime($myrow['news_date'])),
+          $myrow['news_text']
+        );
+      } while ($myrow = mysqli_fetch_assoc($result));
+      ?>
     </ul>
-  </aside>
+    </aside>
   </main>
 
   <!--=== Footer ===-->
   <footer class="footer">
     <div class="footer-content-wrapper container">
-      <p class="footer-email-text">О сотрудничестве и по другим вопросам:<br><a class="footer-email-link"
-          href="mailto:danya.tvorun.88@mail.ru">danya.tvorun.88@mail.ru</a></p>
+      <p class="footer-email-text">О сотрудничестве и по другим вопросам:<br><a class="footer-email-link" href="mailto:danya.tvorun.88@mail.ru">danya.tvorun.88@mail.ru</a></p>
 
       <ul class="list-reset footer-socials-list">
-        <li class="socials-item"><a class="socials-link socials-fb" href="https://ru-ru.facebook.com/"><img
-              class="socials-img" src="/img/fb.png" width="35" height="35" alt="Facebook"><span
-              class="visually-hidden">Facebook</span></a>
+        <li class="socials-item"><a class="socials-link socials-fb" href="https://ru-ru.facebook.com/"><img class="socials-img" src="/img/fb.png" width="35" height="35" alt="Facebook"><span class="visually-hidden">Facebook</span></a>
         </li>
-        <li class="socials-item"><a class="socials-link socials-tw" href="https://twitter.com/"><img class="socials-img"
-              src="/img/tw.png" width="35" height="35" alt="Facebook"><span class="visually-hidden">Facebook</span></a>
+        <li class="socials-item"><a class="socials-link socials-tw" href="https://twitter.com/"><img class="socials-img" src="/img/tw.png" width="35" height="35" alt="Facebook"><span class="visually-hidden">Facebook</span></a>
         </li>
-        <li class="socials-item"><a class="socials-link socials-vk" href="https://vk.com/dancanadian"><img
-              class="socials-img" src="/img/vk.png" width="35" height="35" alt="Вконтакте"><span
-              class="visually-hidden">VK</span></a></li>
-        <li class="socials-item"><a class="socials-link socials-ok" href="https://ok.ru/"><img class="socials-img"
-              src="/img/odnoklassniki3.png" width="35" height="35" alt="Одноклассники"><span
-              class="visually-hidden">OK</span></a></li>
+        <li class="socials-item"><a class="socials-link socials-vk" href="https://vk.com/dancanadian"><img class="socials-img" src="/img/vk.png" width="35" height="35" alt="Вконтакте"><span class="visually-hidden">VK</span></a></li>
+        <li class="socials-item"><a class="socials-link socials-ok" href="https://ok.ru/"><img class="socials-img" src="/img/odnoklassniki3.png" width="35" height="35" alt="Одноклассники"><span class="visually-hidden">OK</span></a></li>
       </ul>
     </div>
   </footer>
@@ -167,26 +162,28 @@
       <input class="admin-signin-input dmin-password-input" name="admin_password" id="admin-password" type="text" placeholder="Пароль">
 
       <button name="signin" class="admin-signin-button" type="submit" ">Войти</button>
-      <button class="admin-sighin-close-buttom" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <button class=" admin-sighin-close-buttom" type="button"><span class="visually-hidden">Закрыть</span></button>
     </form>
   </section>
 
   <?php
-    // === АВТОРИЗАЦИЯ АДМИНА ===
+  // === АВТОРИЗАЦИЯ АДМИНА ===
 
-    // ПРОБЛЕМА: Если ввести логин и пароль разных админов
-    // (логин одного админа и пароль другого) - авторизация пройдет
+  // ПРОБЛЕМА: Если ввести логин и пароль разных админов
+  // (логин одного админа и пароль другого) - авторизация пройдет
 
-    $login = textboxValue("admin_login");
-    $password = textboxValue("admin_password");
+  $login = textboxValue("admin_login");
+  $password = textboxValue("admin_password");
 
-    $result_admin_logins = mysqli_query($con, 'SELECT id FROM admins WHERE login="' . $login . '"');
-    $result_admin_passwords = mysqli_query($con, 'SELECT id FROM admins WHERE password="' . $password . '"');
+  $result_admin_logins = mysqli_query($con, 'SELECT id FROM admins WHERE login="' . $login . '"');
+  $result_admin_passwords = mysqli_query($con, 'SELECT id FROM admins WHERE password="' . $password . '"');
 
-    if (mysqli_num_rows($result_admin_logins) > 0 &&
-    mysqli_num_rows($result_admin_passwords) > 0) {
-      printNewsModal();
-    }
+  if (
+    mysqli_num_rows($result_admin_logins) > 0 &&
+    mysqli_num_rows($result_admin_passwords) > 0
+  ) {
+    printNewsModal();
+  }
   ?>
 
   <script src="js/modal-admin-signin.min.js"></script>
